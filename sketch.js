@@ -8,10 +8,13 @@ function preload()
 
 function setup(){
   createCanvas(window.innerWidth,window.innerHeight);
-  cursor = createSprite(window.innerWidth/2,window.innerHeight/2,30,30);
-  cursor.addImage("cursor",cursorImg);
-  cursor.scale=0.2;
-  
+  if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
+    
+  }else{
+    cursor = createSprite(window.innerWidth/2,window.innerHeight/2,30,30);
+    cursor.addImage("cursor",cursorImg);
+    cursor.scale=0.2;
+  }
 }
 
 function draw() {
@@ -32,4 +35,4 @@ window.addEventListener('touchend', function() {
   clicks=clicks+1;
  });
 
-document.title = 'Click!';
+ document.title = 'Click!';
