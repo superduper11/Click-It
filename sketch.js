@@ -31,3 +31,5 @@ function mouseClicked()
 window.addEventListener('touchend', function() {
   clicks=clicks+1;
  });
+
+document.title = 'Click!';
