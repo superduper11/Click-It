@@ -28,7 +28,6 @@ function mouseClicked()
 {
   clicks=clicks+1;
 }
-function touchend()
-{
+window.addEventListener('touchend', function() {
   clicks=clicks+1;
-}
+ });
