@@ -19,12 +19,17 @@ function setup(){
 
 function draw() {
   background("white")
+  if(keyDown("r")||keyDown("backspace"))
+  {
+    clicks=0;
+  }
   cursor.x=World.mouseX
   cursor.y=World.mouseY
   drawSprites();
   fill("black")
   textSize(30)
   text("Clicks: "+clicks,window.innerWidth/2-55,window.innerHeight/2)
+  text("Press R or Backspace to reset clicks",window.innerWidth/2-235,window.innerHeight/2+40)
 }
 
 function mouseClicked()
